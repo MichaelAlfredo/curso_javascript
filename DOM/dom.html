@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <link rel="stylesheet" href="dom.css" />
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <h3>Manejo del DOM</h3>
+    <p id="que-es">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab illo soluta
+      culpa velit facilis laborum corporis vitae quam, rerum unde quaerat odio
+      nobis, porro autem dolore quas sint hic aut.
+    </p>
+    <nav id="menu">
+      <ul>
+        <li><a href="#">seccion 1</a></li>
+        <li><a href="#">seccion 2</a></li>
+        <li><a href="#">seccion 3</a></li>
+        <li><a href="#">seccion 4</a></li>
+        <li><a href="#">seccion 5</a></li>
+      </ul>
+    </nav>
+    <input type="text" name="nombre" placeholder="nombre" />
+    <a
+      class="link-dom"
+      href="dom.html"
+      style="background-color: #f7df1e; color: #222"
+      data-description="Document Object Model"
+      >DOM</a
+    >
+    <section class="cards">
+      <figure class="card">
+        <img src="../assets/tech.jpg" alt="tech" />
+        <figcaption>Tech</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="../assets/animals.jpg" alt="animals" />
+        <figcaption>animals</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="../assets/people.jpg" alt="People" />
+        <figcaption>People</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="../assets/chess.jpg" alt="chess" />
+        <figcaption>Chess</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="../assets/nature.jpg" alt="nature" />
+        <figcaption>nature</figcaption>
+      </figure>
+    </section>
+    <template id="template-card">
+      <figure class="card">
+        <img />
+        <figcaption></figcaption>
+      </figure>
+    </template>
+    <h3>Eventos en JavaScript</h3>
+    <h4>Manejadores de Eventos</h4>
+    <!--    <button onclick="alert('hola')">Evento con atributo HTML</button> -->
+    <button onclick="holaMundo()">Evento con atributo HTML</button>
+    <br /><br />
+    <button id="evento-semantico">Evento con manejador semántico</button>
+    <br /><br />
+    <button id="evento-multiple">Evento con manejador múltiple</button>
+    <script src="index.js"></script>
+  </body>
+</html>

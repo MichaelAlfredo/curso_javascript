@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémons</title>
+    <style>
+      .loader{
+          display: block;
+          margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 19:47 -->
+    <h1>Pokémons</h1>
+    <img src="/assets/loader.svg" alt="" />
+    <nav class="links"></nav>
+    <main class="grid-fluid"></main>
+    <p></p>
+    <script>
+      const d = document,
+        $main = d.querySelector("main"),
+        $links = d.querySelector(".links");
+
+      let pokeAPI = "https://pokeapi.co/api/v2/pokemon/";
+
+      async function loadPokemos(url) {
+        try {
+          $main.innerHTML = `<img class="loader" src="/assets/loader.svg" alt="Cargando..."> `;
+
+          let res = await fetch(url),
+            json = await res.json(),
+            $template = "",
+            prevLink,
+            nextLink;
+
+          if (!res.ok) throw { status: res.status, statusText: res.statusText };
+
+          for (let i = 0; i < json.result.lenght; i++) {
+            const element = array[i];
+          }
+        } catch (err) {
+          console.log(err);
+          let message = err.statusText || "Ocurrió un error";
+          $main.innerHTML = `<p> Error: ${err.status}:${message} </p>`;
+        }
+      }
+
+      d.addEventListener("DOMContentLoaded", (e) => loadPokemos(pokeAPI));
+    </script>
+  </body>
+</html>
